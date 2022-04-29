@@ -122,6 +122,8 @@ main
   margin: auto
   display: flex
   flex-direction: column
+  justify-content: space-around
+  align-items: space-around
   row-gap: 25px
 
 #modalBg
@@ -155,8 +157,6 @@ main
     filter: brightness(1.2)
 
 .cat
-  margin: auto
-  width: 95%
   background-color: #eee
   cursor: pointer
   border: 1px var(--mainColor) solid
@@ -176,6 +176,17 @@ main
 
 @media screen and (min-width: 769px)
   main
+    flex-direction: row
+    flex-wrap: wrap
+
+  #modal
+    width: 75%
+
+  .cat
+    width: 45%
+
+@media screen and (min-width: 993px)
+  main
     max-width: 75%
     flex-direction: row
     flex-wrap: wrap
@@ -184,6 +195,5 @@ main
     width: 50%
 
   .cat
-    margin: 0 calc(.75% - 2px)
-    width: 23.5%
+    width: 22.5%
 </style>
